@@ -1,5 +1,8 @@
 #!/bin/bash
-
+if [[ ! -d "target/bin" || ! -d "target/obj" ]];
+then
+     make create_dir
+fi
 echo -e "[\033[1;35m⚡Running\033[0m] "
 TIMEFORMAT="%Us"
 CPUS=$(nproc --all)
